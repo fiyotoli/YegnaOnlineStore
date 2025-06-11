@@ -55,7 +55,7 @@ function App() {
       ) : (
         <>
           <ToastContainer />
-          <SearchBar />
+          
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/collection' element={<Collection />} />

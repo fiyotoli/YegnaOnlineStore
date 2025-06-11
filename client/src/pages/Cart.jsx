@@ -50,7 +50,7 @@ if (products.length > 0) {
                   src={productData.image[0]}
                   alt="product"
                   className="img-thumbnail me-3"
-                  style={{ width: '100px', height: '100px',objectFit: 'containn' }}
+                  style={{ width: '100px', height: '100px',objectFit: 'contain' }}
                 />
 
                 {/* Product Details */}
@@ -82,7 +82,7 @@ if (products.length > 0) {
                     src={assets.bin_icon}
                     alt="delete"
                     className="img-fluid cursor-pointer"
-                    style={{ width: '24px' ,cursor: "pointer"
+                    style={{ width: '24px' ,cursor: "pointer",
 }}
                   />
                 </div>

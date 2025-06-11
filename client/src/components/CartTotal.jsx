@@ -9,7 +9,8 @@ function CartTotal() {
     <div className="card p-4 shadow-sm">
       {/* Title Section */}
       <div className="mb-4 text-center">
-        <Title text1="cart" text2="total" />
+        <span className=' lead'>Cart Total </span>
+       
       </div>
 
       {/* Subtotal */}

@@ -130,14 +130,7 @@ function Navbar() {
 
           {/* Right Section */}
           <div className="d-flex align-items-center justify-content-center mt-3 mt-lg-0">
-            {/* Search Icon */}
-            <img
-              src={assets.search_icon}
-              alt="Search"
-              onClick={() => setShowSearch(true)}
-              className="img-fluid me-3"
-              style={{ width: '24px', cursor: 'pointer' }}
-            />
+           
 
             {/* Profile Dropdown */}
             <div className="dropdown me-3">

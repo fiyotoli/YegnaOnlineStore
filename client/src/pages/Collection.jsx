@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import Title from '../components/Title';
 import ProductItem from '../components/ProductItem';
+import SearchBar from '../components/SearchBar';
 
 function Collection() {
   const { products, search, showSearch } = useContext(ShopContext);
@@ -85,7 +86,10 @@ function Collection() {
 
   return (
     <div className="container mt-5 pt-5 mb-3 mb-4">
-      <div className="row">
+
+      <SearchBar/>
+
+      <div className="row mt-5">
         {/* Filters */}
         <div className="col-md-3 shadow-sm py-4">
           <div className="mb-4">
