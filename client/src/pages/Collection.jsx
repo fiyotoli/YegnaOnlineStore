@@ -2,10 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import Title from '../components/Title';
 import ProductItem from '../components/ProductItem';
-import SearchBar from '../components/SearchBar';
+import { FiSearch } from 'react-icons/fi';
 
 function Collection() {
-  const { products, search, showSearch } = useContext(ShopContext);
+  const { products, search, showSearch ,setSearch} = useContext(ShopContext);
   const [filterProducts, setFilterProducts] = useState([]);
   const [visibleCount, setVisibleCount] = useState(9); // initially show 6
   const [category, setCategory] = useState([]);
@@ -31,7 +31,7 @@ function Collection() {
   const applyFilter = () => {
     let productsCopy = products.slice();
 
-    if (showSearch && search) {
+    if ( search) {
       productsCopy = productsCopy.filter(item =>
         item.name.toLowerCase().includes(search.toLowerCase())
       );
@@ -85,11 +85,31 @@ function Collection() {
   };
 
   return (
-    <div className="container mt-5 pt-5 mb-3 mb-4">
+    <div className="container mb-3 mb-4 mt-5 pt-5 ">
 
-      <SearchBar/>
+{/* search bar */}
+<div className="row justify-content-center mt-2 pt-5">
+  <div className="col-md-8 col-lg-7 mb-4">
+    <div className="input-group  ">
+      <input
+        type="text"
+        className="form-control rounded-start-pill ps-4 py-2 shadow-sm bg-white"
+        placeholder="Search products..."
+        value={search}
+        onChange={(e) =>
+          typeof setSearch === 'function' && setSearch(e.target.value)
+        }
+      />
+      <span className="input-group-text text-white border-start-0 rounded-end-pill bg-primary">
+        <FiSearch />
+      </span>
+    </div>
+  </div>
+</div>
+{/* search bar */}
 
-      <div className="row mt-5">
+
+      <div className="row mt-3">
         {/* Filters */}
         <div className="col-md-3 shadow-sm py-4">
           <div className="mb-4">

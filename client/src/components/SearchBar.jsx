@@ -9,17 +9,11 @@ function SearchBar() {
   const [visible, setVisible] = useState(false);
   const location = useLocation();
 
-  useEffect(() => {
-    if (location.pathname.includes('collection')) {
-      setVisible(true);
-    } else {
-      setVisible(false);
-    }
-  }, [location]);
+ 
 
   return showSearch && visible ? (
-    <div className="container bg-white px-3 mt-4 rounded">
-      <div className="row justify-content-center mt-5">
+    <div className="container bg-white px-3 pt-5 mt-5 rounded">
+      <div className="row justify-content-center">
         <div className="col-md-8 col-lg-8 d-flex align-items-center">
           <div className="position-relative w-100 me-3 mt-3">
             <input
