@@ -1,0 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+  }
+
+* {
+    margin: 0;                /* Remove default margin */
+    padding: 0;               /* Remove default padding */
+    box-sizing: border-box;   /* Include padding and border in total width and height */
+}
+
+/* Ensure html and body fill the viewport */
+html, body {
+    min-width: 100%;             /* Set width to 100% of the viewport */
+    min-height: 100%;             /* Set height to 100% of the viewport */
+    overflow-x: hidden; 
+    overflow-y: auto;      /* Prevent horizontal scrolling */
+         /* Allow vertical scrolling if necessary */
+}
+  
+a.active hr{
+    display: block;
+}
+
+.card:hover .product-image {
+    transform: scale(1.1); /* Zoom out effect on image */
+  }
+  
+  
