@@ -36,17 +36,18 @@ const Footer = () => {
               </a>
             </div>
           </div>
+{/* Column 2 */}
+<div className="col-md-3 mb-3">
+  <h5 className="mb-3">Services</h5>
+  <ul className="list-unstyled" style={{ listStyleType: 'none' }}>
+    <li style={{ cursor: 'text' }}>Online Shopping</li>
+    <li style={{ cursor: 'text' }}>Order Support</li>
+    <li style={{ cursor: 'text' }}>Payment Options</li>
+    <li style={{ cursor: 'text' }}>Shipping & Delivery</li>
+  </ul>
+</div>
 
-          {/* Column 2 */}
-          <div className="col-md-3 mb-3">
-            <h5 className="mb-3">Services</h5>
-            <ul className="list-unstyled" style={{ listStyleType: 'none' }}>
-              <li>Online Shopping</li>
-              <li>Order Support</li>
-              <li>Payment Options</li>
-              <li>Shipping & Delivery</li>
-            </ul>
-          </div>
+
 
           {/* Column 3 */}
           <div className="col-md-3 mb-3">

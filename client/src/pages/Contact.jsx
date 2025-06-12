@@ -91,7 +91,7 @@ const Contact = () => {
             </li>
           </ul>
 
-          <Title level={4} style={{ color: '#0d6efd', marginTop: '24px' }}>Follow Us</Title>
+          <Title level={4} style={{ color: '#000000', marginTop: '-3px' }}>Follow Us On</Title>
           <div className="d-flex">
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tasfayneshtolasa35@gmail.com" className="social-icon me-3">
               <FaEnvelope size={24} />

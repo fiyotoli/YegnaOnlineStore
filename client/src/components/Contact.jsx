@@ -93,8 +93,8 @@ const Contact = () => {
             </li>
           </ul>
 
-          <Title level={4} style={{ color: '#0d6efd', marginTop: '24px' }}>
-            Follow Us
+          <Title level={4} style={{ color: '#000000', marginTop: '-3px' }}>
+            Follow Us On
           </Title>
           <div className="d-flex">
             <a
