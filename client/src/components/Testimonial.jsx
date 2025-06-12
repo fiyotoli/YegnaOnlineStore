@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 
 const testimonials = [
   {
-    quote: "This company helped me find my dream house in no time!",
+    quote: "This company helped me find my needs in fashion clothing!",
     name: "Abebe Kebede",
     avatar: "https://cdn-icons-png.freepik.com/512/6714/6714042.png",
   },
@@ -18,12 +18,12 @@ const testimonials = [
     avatar: "https://cdn-icons-png.freepik.com/256/8583/8583504.png?uid=R157617096&ga=GA1.1.1359343644.1738236308&semt=ais_hybrid",
   },
   {
-    quote: "Highly recommend to anyone looking to buy or rent property!",
+    quote: "Highly recommend to anyone looking to buy fashion cloth!",
     name: "Bekele Alemu",
     avatar: "https://cdn-icons-png.freepik.com/512/6714/6714042.png",
   },
   {
-    quote: "Best experience I’ve had with a real estate company.",
+    quote: "Best experience I’ve had with a fashion online store.",
     name: "Selamawit Getachew",
     avatar: "https://cdn-icons-png.freepik.com/256/8583/8583504.png?uid=R157617096&ga=GA1.1.1359343644.1738236308&semt=ais_hybrid",
   },
