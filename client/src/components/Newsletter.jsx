@@ -38,9 +38,9 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="shadow py-4">
-      <div className="container-fluid">
-        <div className="row justify-content-center">
+    <section className="mt-3">
+      <div className="container shadow py-3 mb-5 min-h-100">
+        <div className="row jd-flex justify-content-center align-items-center">
           <div
             className="col-md-9 col-lg-8 text-center"
             data-aos="zoom-out"

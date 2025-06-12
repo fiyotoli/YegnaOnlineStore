@@ -23,7 +23,7 @@ const Hero = () => {
           >
             <h1 className="display-3">
               Welcome to{' '}
-              <span className="text-primary fw-bold">Our Fashion Store</span>
+              <span className="text-primary fw-bold">Yegna Fashion Store</span>
             </h1>
             <p className="lead">
               Discover the latest trends in fashion with our exclusive collection. Style that speaks for you!

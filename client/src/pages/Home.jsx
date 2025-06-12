@@ -5,7 +5,7 @@ import LatestCollection from '../components/LatestCollection'
 
 import TestimonialCarousel from '../components/Testimonial'
 import Faq from '../components/Faq'
-import Contact from '../components/Contact'
+
 import Newsletter from '../components/Newsletter'
 import Service from '../components/Service'
 import About from '../components/About'
@@ -22,7 +22,7 @@ function Home() {
    <TestimonialCarousel/>
    <Faq/>
    <Newsletter/>
-   <Contact/>
+  
     </div>
   )
 }

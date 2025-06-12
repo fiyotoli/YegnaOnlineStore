@@ -93,31 +93,7 @@ const Contact = () => {
             </li>
           </ul>
 
-          <Title level={4} style={{ color: '#000000', marginTop: '-3px' }}>
-            Follow Us On
-          </Title>
-          <div className="d-flex">
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=tasfayneshtolasa35@gmail.com"
-              className="social-icon me-3"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaEnvelope size={24} />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/tasfaynesh-tolasa"
-              className="social-icon me-3"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin size={24} />
-            </a>
-            <a href="https://t.me/sabelatt" className="social-icon" target="_blank" rel="noopener noreferrer">
-              <FaTelegram size={24} />
-            </a>
-          </div>
+          
         </Col>
       </Row>
     </div>
