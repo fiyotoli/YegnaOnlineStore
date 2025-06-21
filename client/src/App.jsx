@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-
+import Collection from './pages/Collection';
 import About from './pages/About';
-
+import Contact from './pages/Contact';
 import Orders from './pages/Orders';
 import Login from './pages/login';
 import Product from './pages/Product';
@@ -16,7 +16,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify';
 import { FaArrowAltCircleUp } from 'react-icons/fa';
 import Footer from './components/Footer';
-import Collection from './pages/collection';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -59,11 +58,9 @@ function App() {
           
           <Routes>
             <Route path='/' element={<Home />} />
-            
-           
             <Route path='/collection' element={<Collection />} />
-          {/* <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} /> */}
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
             <Route path='/product/:productId' element={<Product />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/login' element={<Login />} />

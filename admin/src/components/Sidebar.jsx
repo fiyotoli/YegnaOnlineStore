@@ -41,7 +41,7 @@ function Sidebar() {
       >
         {/* Close icon on small screens */}
         {isMobile && (
-          <div className="d-flex text-white justify-content-end">
+          <div className="d-flex justify-content-end">
             <MdClose size={26} onClick={closeSidebar} style={{ cursor: 'pointer' }} />
           </div>
         )}
@@ -53,7 +53,6 @@ function Sidebar() {
             style={{ fontWeight: 500 }}
             onClick={closeSidebar}
           >
-            
             <MdAddCircleOutline className="me-2" size={20} />
             <p className="m-0">Add Items</p>
           </NavLink>

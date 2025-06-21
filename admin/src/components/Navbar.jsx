@@ -37,10 +37,19 @@ function Navbar({ setToken }) {
   return (
     <>
       {/* Navbar */}
-      <div className="bg-white d-flex align-items-center justify-content-between py-3  px-5 fixed-top shadow-sm">
+      <div className="bg-white d-flex align-items-center justify-content-between py-2 px-5 fixed-top shadow-sm">
         <Link className="navbar-brand" to="/" onClick={handleLogoClick}>
+          <img
+            src={logo}
+            alt="Logo"
+            className='cursor: pointer'
+            style={{
+              width: 'auto',
+              height: '70px',
 
-          <h3 className='fw-bold text-primary'>Logo</h3>
+              cursor: 'pointer', // Make logo clickable only on small/medium screens
+            }}
+          />
         </Link>
 
         {/* Logout Button */}
@@ -51,7 +60,7 @@ function Navbar({ setToken }) {
 
       {/* Sidebar */}
       <div
-        className="position-fixed top-0 start-0 bg-primary vh-100 shadow p-3"
+        className="position-fixed top-0 start-0 bg-light vh-100 shadow p-3"
         style={{
           width: '250px',
           zIndex: 1050,
@@ -60,12 +69,19 @@ function Navbar({ setToken }) {
         }}
       >
         {/* Logo and Close icon container (vertically aligned) */}
-        <div className="d-flex  align-items-center border-bottom border-1 border-white">
+        <div className="d-flex  align-items-center border-bottom border-1 border-dark">
           {/* Logo on top left of the sidebar */}
           <div className="mb-4">
-            
-          <h6 onClick={handleLogoClick} className='lead fw-bold text-white'>Employee profile Dashboard</h6>
-            
+            <img
+              src={logo}
+              alt="Logo"
+              style={{
+                width: 'auto',
+                height: '50px',
+                cursor: 'pointer',
+              }}
+              onClick={handleLogoClick}
+            />
           </div>
 
           {/* Close icon on top right of the sidebar */}
@@ -74,7 +90,7 @@ function Navbar({ setToken }) {
               <MdClose
                 size={26}
                 onClick={closeSidebar}
-                style={{ cursor: 'pointer' ,color:'white'}}
+                style={{ cursor: 'pointer' }}
               />
             </div>
           )}
@@ -84,25 +100,33 @@ function Navbar({ setToken }) {
         <div className="d-flex flex-column mt-4 pt-3">
           <NavLink
             to="/"
-            className="sidebar-link text-decoration-none text-white mb-4 d-flex align-items-center"
+            className="sidebar-link text-decoration-none text-dark mb-4 d-flex align-items-center"
             style={{ fontWeight: 500 }}
             onClick={closeSidebar}
           >
             <MdAddCircleOutline className="me-2" size={20} />
-            <p className="m-0 ">Add Employee</p>
+            <p className="m-0">Add Items</p>
           </NavLink>
 
           <NavLink
             to="/list"
-            className="sidebar-link text-decoration-none text-white mb-4 d-flex align-items-center"
+            className="sidebar-link text-decoration-none text-dark mb-4 d-flex align-items-center"
             style={{ fontWeight: 500 }}
             onClick={closeSidebar}
           >
             <MdListAlt className="me-2" size={20} />
-            <p className="m-0">List Employee</p>
+            <p className="m-0">List Items</p>
           </NavLink>
 
-          
+          <NavLink
+            to="/orders"
+            className="sidebar-link text-decoration-none text-dark mb-4 d-flex align-items-center"
+            style={{ fontWeight: 500 }}
+            onClick={closeSidebar}
+          >
+            <MdListAlt className="me-2" size={20} />
+            <p className="m-0">Orders</p>
+          </NavLink>
         </div>
       </div>
 
