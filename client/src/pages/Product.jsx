@@ -3,10 +3,11 @@ import { useParams } from 'react-router-dom';
 import { ShopContext } from '../context/ShopContext';
 import RelatedProducts from '../components/RelatedProducts';
 import { assets } from '../assets/assets';
+import { FaInfoCircle, FaStar, FaStarHalfAlt } from 'react-icons/fa'; // Added React icons
 
 const Product = () => {
   const { productId } = useParams();
-  const { products, currency,addToCart } = useContext(ShopContext);
+  const { products, currency, addToCart } = useContext(ShopContext);
   const [productData, setProductData] = useState(null);
   const [image, setImage] = useState('');
   const [size, setSize] = useState('');
@@ -20,12 +21,14 @@ const Product = () => {
     });
   };
 
-  useEffect(() => {
-    fetchProductData();
-  }, [productId, products]);
+ useEffect(() => {
+  fetchProductData();
+  window.scrollTo(0, 0); // Scroll to top when productId changes
+}, [productId, products]);
+
 
   return productData ? (
-    <div className="container mt-5">
+    <div className="container mt-5 pt-5">
       {/* Product Details */}
       <div className="row">
         {/* Product Image Section */}
@@ -37,8 +40,8 @@ const Product = () => {
                 src={item}
                 key={index}
                 alt="product-thumbnail"
-                className="img-thumbnail me-2"
-                style={{ width: '50px', height: '50px', cursor: 'pointer' }}
+                className="img-thumbnail me-2 mt-3"
+                style={{ objectFit: 'contain',width: '50px', height: '50px', cursor: 'pointer' }}
               />
             ))}
           </div>
@@ -49,17 +52,34 @@ const Product = () => {
 
         {/* Product Info Section */}
         <div className="col-md-6">
-          <h1 className="mb-3">{productData.name}</h1>
-          <div className="d-flex align-items-center mb-3">
-            {[...Array(4)].map((_, index) => (
-              <img src={assets.star_icon} alt="star" key={index} className="me-1" />
-            ))}
-            <img src={assets.star_dull_icon} alt="star-dull" className="me-2" />
-            <p className="mb-0">123 reviews</p>
-          </div>
-          <h3 className="text-danger">{currency}{productData.price}</h3>
-          <p>{productData.description}</p>
+          <h1 className="mb-1 mt-3 text-capitalize">{productData.name}</h1>
+          
 
+          {/* Price and Description in Different Columns */}
+          <div className="">
+           
+
+            {/* Description Column */}
+            <div className="col">
+              <div
+                className="d-inline-flex align-items-left  py-1 rounded mb-1"
+                style={{ fontSize: '14px' }}
+              >
+                <FaInfoCircle className="me-2" />
+                <span className="" style={{ opacity: 0.8 }}>
+                  {productData.description || 'No description available'} ·
+                </span>
+              </div>
+            </div>
+             {/* Price Column */}
+             <div className="col">
+              <span className="d-inline-block bg-primary text-white rounded px-3 py-1 fw-bold mb-2 mt-2">
+                {currency}{productData.price}
+              </span>
+            </div>
+          </div>
+
+          {/* Select Size */}
           <div className="mb-3">
             <p className="fw-bold">Select Size</p>
             <div>
@@ -75,7 +95,9 @@ const Product = () => {
             </div>
           </div>
 
-          <button  onClick={()=>addToCart(productData._id,size) } className="btn btn-success">Add to Cart</button>
+          <button onClick={() => addToCart(productData._id, size)} className="btn btn-primary">
+            Add to Cart
+          </button>
         </div>
       </div>
 
