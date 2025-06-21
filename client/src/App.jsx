@@ -16,7 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify';
 import { FaArrowAltCircleUp } from 'react-icons/fa';
 import Footer from './components/Footer';
-import Collection from './pages/Collection';
+import Collection from './pages/collection';
 
 function App() {
   const [loading, setLoading] = useState(true);
